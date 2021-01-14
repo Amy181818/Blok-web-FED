@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+/* Index.html */
 
 body {
     margin: 0;
@@ -11,7 +12,15 @@ body {
     font-family: sans-serif;
 }
 
+header > p {
+    margin: 0;
+    text-align: center;
+    background-color: palevioletred;
+    font-size: .7em;
+    color: black;
+}
 
+/* navigatie */
 
 a {
 
@@ -29,6 +38,8 @@ a {
     background-color: white;
 
 }
+
+
 
 header {
     position: fixed;
@@ -57,9 +68,10 @@ header {
 }
 
 .nav-link-logo img {
-    width: 11rem;
+    width: 13rem;
     z-index: 1500;
-    padding-left: 20em;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -72,14 +84,14 @@ header {
 
 .nav-link-zoeken {
     font-size: .8rem;
+    color: black;
 }
 
 .nav-link-tas img {
     width: 1.5rem;
     height: 1.5rem;
     z-index: 1500;
-    display: flex;
-    justify-content: center;
+
 
 }
 
@@ -87,30 +99,37 @@ header {
     width: 1.5rem;
     height: 1.5rem;
     z-index: 1500;
-    padding-left: 12em;
+
 }
 
 .nav-link-profiel img {
     width: 1.5rem;
     height: 1.5rem;
     z-index: 1500;
-    padding-left: 1em;
+
 }
 
 .nav-extra {
-padding-left: 10em;
-    padding-top: 1.5em;
+    display: flex;
+    justify-content: center;
     padding-bottom: 1em;
+    padding-right: 2.8em;
 }
 
-.nav-extra {
+.nav-extra .nav-link-hartje {
+    visibility: hidden;
+}
 
-
+.nav-extra li a {
+    padding-left: 2em;
+    padding-right: 2em;
+    color: black;
+    font-size: .9em;
+    opacity: .9em;
 }
 
 
-
-
+/* navigatie responsive */
 
 @media screen and (max-width: 767px) {
     header {
@@ -120,6 +139,8 @@ padding-left: 10em;
     header .container {
         padding: 0;
     }
+
+
 
     .nav-list {
         margin-top: 0;
@@ -143,6 +164,18 @@ padding-left: 10em;
         display: none;
     }
 
+
+    .nav-link-logo img {
+        padding-left: 8em;
+    }
+
+    .nav-link-tas img {
+        padding-left: 22em;
+    }
+
+    .nav-link-zoeken img {
+        padding-left: 30em;
+    }
 
 
     .mobile-menu {
@@ -192,14 +225,6 @@ padding-left: 10em;
         background-color: white;
     }
 
-
-   .nav-link-tas {
-        width: 1.6rem;
-        height: 4.8rem;
-        transition: opacity 3s;
-    }
-
-
     .nav-link {
         font-size: 1.7rem;
         padding: 0;
@@ -213,14 +238,9 @@ padding-left: 10em;
         left: 0;
         width: 0;
         height: 0;
-        display: block;
-        padding: 10.5rem 5rem;
-        z-index: 1000;
-        box-sizing: border-box;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity .3s;
-        color: black;
+        display: flex;
+        padding-left: 5rem;
+
     }
 
     .nav-extra {
@@ -245,24 +265,9 @@ padding-left: 10em;
         visibility: visible;
     }
 
-    .active .nav-list-larger {
-
-        height: 100vh;
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .active .nav-link-tas {
-        opacity: 0;
-        transition: opacity .3s;
-    }
-
-    .active .nav-link-logo img {
-        opacity: 0;
-    }
 
 
-    .nav-list-larger  {
+    .nav-list-larger {
         width: 100%;
         justify-content: flex-start;
         border-bottom: 2px solid rgba(255, 255, 255, .1);
@@ -272,13 +277,67 @@ padding-left: 10em;
 
 }
 
-@media screen and (min-width: 767px) {
 
+@media screen and (min-width: 767px) {
+    .container .nav-list-larger {
+        display: flex;
+    }
+
+    .container .nav-list-larger li + li + li + li {
+        margin-left: 1em;
+    }
+
+
+    .container .nav-list-larger li:first-of-type(1) {
+        margin-right: auto;
+    }
+
+    .container .nav-list-larger li:nth-of-type(2) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nav-link-logo img {
+        padding-left: 2em;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 767px) {
+    .nav-link-logo img {
+        padding-left: 1em;
+        padding-top: .8em;
+        width: 6em;
+
+    }
+
+    .nav-link-tas img {
+        padding-left: 7em;
+        padding-top: .6em;
+        width: .8em;
+        height: .8em;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav-link-zoeken img {
+        padding-left: 16em;
+        padding-top: .6em;
+        width: .8em;
+        height: .8em;
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 
 
 
+/* Begin foto*/
 
 .home img {
     position: relative;
@@ -286,118 +345,71 @@ padding-left: 10em;
     width: 100%;
 }
 
+/*Begin foto responsive */
 @media (min-width:1025px) {
     .home img {
-        height: 550px;
+        height: 700px;
         background-position: center center;
 
     }
 }
 
-@media (max-width:400px) {
+@media (max-width:767px) {
     .home img {
-        height: 70%;
-    }
-}
-
-#slider {
-    height: 300px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-left: 1em;
-}
-
-@media (max-width: 400px) {
-    #slider {
-        width: 100%;
-        overflow: hidden;
-        margin: auto;
-
-    }
-}
-
-@media (min-width:1025px) {
-    #slider {
-        width: 100%;
-    }
-
-    #slider h2:first-of-type {
-        font-size: 1em;
+        height: 450px;
     }
 }
 
 
-#slider div {
-    height: 100%;
-    width: 80%;
+/*Best sellers slider*/
+
+h1 {
+    padding-left: 1em;
 }
 
-#slider .foto1 {
-    background-image: url("../IMAGESNIEUW/sylvie.jpg");
-    background-size: cover;
-    background-position: center center;
-    height: 250px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4.5fr 1fr 1fr;
-}
-
-
-
-.foto1 h2 {
-    color: white;
-    background-color: lightpink;
-    height: 2em;
-    width: 100%;
-    font-size: 1rem;
-    text-align: center;
-    grid-row-start: 8;
-
-}
-
-#slider p {
-    color: white;
-    margin: auto;
-    grid-row-start: 8;
+#scroll {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 
 }
 
 
 
-#slider .foto2 {
-    height: 250px;
-    background-image: url(../IMAGESNIEUW/birthstonering.jpg);
-    background-size: cover;
-    background-position: center center;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4.5fr 1fr 1fr;
+.slide {
+    display: inline-block;
+
 }
 
-#slider .foto3 {
-    height: 250px;
-    background-image: url(../IMAGESNIEUW/fingernecklace.jpg);
-    background-size: cover;
-    background-position: center center;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4.5fr 1fr 1fr;
+.slide img {
+    height: 320px;
+    padding: .5em .5em .5em .5em;
 }
 
-#slider .foto4 {
-    height: 250px;
-    background-image: url(../IMAGESNIEUW/chantal_collectie_2.jpg);
-    background-size: cover;
-    background-position: center center;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4.5fr 1fr 1fr;
+#bericht {
+    position: absolute;
+    top: 110em;
+    margin-left: 52em;
+    width: 4em;
+    position: fixed;
+    padding: 1.5em;
+    border-radius: 50px;
+    background-color: palevioletred;
 }
 
+@media (min-width:768px) {
+
+    .slide img {
+        height: 300px;
+    }
+}
+
+
+
+/*Ons verhaal*/
 #Onsverhaal {
     margin-top: 2em;
-    position: relative;
+    padding-bottom: 10em;
     height: 700px;
     display: grid;
     grid-template-columns: 2fr;
@@ -431,7 +443,17 @@ padding-left: 10em;
 
 }
 
+#overons {
+    padding: 2em 10em 1em 4em;
+    font-size: .8em;
+    color: black;
+    text-decoration-line: underline;
+    text-decoration-color: palevioletred;
+    text-align: right;
+}
 
+
+/*Ons verhaal responsive*/
 @media (min-width:1025px) {
 
     .FOTOonsverhaal {
@@ -445,9 +467,6 @@ padding-left: 10em;
 
     }
 
-}
-
-@media (min-width:1025px) {
     .rechts1 {
         position: relative;
         max-width: 380px;
@@ -456,25 +475,18 @@ padding-left: 10em;
         text-align: left;
         grid-row-start: 1;
     }
-}
 
-@media (max-width:400px) {
-    .rechts1 {
-        position: relative;
-        grid-row-start: 3;
-    }
-}
 
-@media(max-width: 400px) {
-    .FOTOonsverhaal {
-        width: 100%;
-    }
+
 }
 
 
+
+/*De giftshop*/
 #giftshop {
-    position: relative;
+
     margin-top: 15em;
+    padding-bottom: 10em;
     height: 500px;
     display: grid;
     grid-template-columns: 2fr;
@@ -508,7 +520,7 @@ padding-left: 10em;
 
 }
 
-
+/*De giftshop responsive*/
 @media (min-width:1025px) {
 
     .FOTOgiftshop {
@@ -521,16 +533,6 @@ padding-left: 10em;
         margin-left: 5em;
     }
 
-}
-
-@media(max-width: 400px) {
-    .FOTOgiftshop {
-        width: 100%;
-    }
-}
-
-
-@media (min-width:1025px) {
     .rechts2 {
         max-width: 380px;
         margin-left: 50em;
@@ -540,7 +542,11 @@ padding-left: 10em;
     }
 }
 
-@media (max-width:400px) {
+@media(max-width: 400px) {
+    .FOTOgiftshop {
+        width: 100%;
+    }
+
     .rechts2 {
         grid-row-start: 3;
         margin-bottom: 5em;
@@ -548,7 +554,7 @@ padding-left: 10em;
 }
 
 
-
+/*Persoonlijke sieraden*/
 #persoonlijk {
     margin-top: 17em;
     padding: 3em 2em 3em 2em;
@@ -570,6 +576,10 @@ padding-left: 10em;
     font-family: fantasy;
 }
 
+.Tekstpersoonlijk h2 {
+    text-align: center;
+}
+
 .Tekstpersoonlijk button {
     text-align: center;
     background-color: palevioletred;
@@ -579,15 +589,340 @@ padding-left: 10em;
 
 }
 
-#single img {
-    width: 60%;
+
+
+/*All the single ladies*/
+
+.Tekstsingle p {
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 1rem;
+    opacity: 0.7;
 }
 
-#wishlist .item {
- display: flex;
-    text-decoration: none;
+
+#single {
+    margin-top: 2em;
+    height: 700px;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 4.5fr 3fr 1fr;
+
+
+}
+
+.FOTOsingle {
+    background-image: url(../IMAGESNIEUW/abbey.jpg);
+    background-size: cover;
+    width: 80%;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.FOTOsingle p {
+    font-size: 1.4rem;
+    font-family: fantasy;
+    color: pink;
+    position: absolute;
+
+    margin-top: 29em;
+    left: 0;
+    background-color: white;
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+
+.rechts3 p {
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 1rem;
+    opacity: 0.7;
+    padding-top: 1em;
+}
+
+.rechts3 h3 {
+    font-size: 2rem;
+}
+
+
+
+.rechts3 {
+    margin: 2em 2em 2em 2em;
+
+}
+
+
+/*Persoonlijke sieraden responsive*/
+@media (min-width:1025px) {
+
+    .FOTOsingle {
+        display: block;
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 90%;
+        margin-left: 5em;
+    }
+
+    .rechts3 {
+        max-width: 380px;
+        margin-left: 40em;
+        margin-top: 3em;
+        text-align: left;
+        grid-row-start: 1;
+    }
+
+    .FOTOsingle p {
+        font-size: 1.5rem;
+        font-family: fantasy;
+        color: pink;
+        position: absolute;
+        margin-left: 15em;
+        left: 0;
+        margin-top: 7em;
+        background-color: white;
+    }
+
+}
+
+@media (max-width:400px) {
+
+    .rechts3 {
+        grid-row-start: 3;
+
+    }
+
+    .FOTOsingle p {
+        text-align: left;
+    }
+
+}
+
+
+/*Footer*/
+.Eind {
+    padding-top: 10em;
+}
+
+.Eind h3 {
+    position: absolute;
+    padding-left: 6em;
+    padding-top: 1em;
+    font-family: fantasy;
+    font-size: 2em;
+    opacity: .5;
+
+}
+
+#footer {
+    background-color: antiquewhite;
+    padding: 2em 2em 2em 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#footer ol li {
+    list-style-type: none;
+}
+
+#footer ol li a {
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#footer .Tekstfooter1 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+#footer .Tekstfooter2 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+#footer .Tekstfooter3 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+#footer .email {
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+.footer_bottom {
+    display: flex;
+    font-size: .5em;
+    padding-top: 3em;
+    position: relative;
+}
+
+.footer_bottom p {
+    left: 1em;
+    bottom: 5em;
+    margin: 0;
+
+}
+
+@media (max-width:954px) {
+    #footer .email {
+        grid-row-start: 3;
+        grid-column-start: 1;
+    }
+}
+
+@media (max-width:768px) {
+
+    .Eind h3 {
+        visibility: hidden;
+    }
+
+    #footer {
+        display: block;
+    }
+}
+
+
+
+/*Wishlist.html*/
+
+#wishlist {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-left: 2em;
+}
+
+#wishlist .accountoverzicht {
+    padding-top: 4em;
+    font-size: 1.5em;
+}
+
+.wishlist_nav {
+    padding-top: 5em;
+    padding-left: 2em;
+    grid-column-start: 1;
+    width: 220px;
+    height: 350px;
+    border: .5px solid grey;
+    border-radius: 10px;
+
+}
+
+.wishlist_nav li {
+    list-style-type: none;
+    padding-bottom: 1.5em;
+}
+
+.wishlist_nav li a {
+    color: black;
+
+}
+
+
+#item1 li {
+    list-style-type: none;
+}
+
+#item1 img {
+    background-color: antiquewhite;
+}
+
+#item2 img {
+    background-color: antiquewhite;
 }
 
 #wishlist h1 {
+    grid-column-start: 2;
+    font-size: 2.2em;
+
+}
+
+#wishlist h2 {
+    grid-column-start: 2;
+    font-size: 1em;
+    opacity: .5;
+
+}
+
+.item_tekst h3 {
+    padding-left: 1em;
+}
+
+.item_tekst p {
+    padding-left: 1em;
+}
+
+.item_tekst h4 {
+    padding-left: 2em;
+    font-size: 1em;
+    text-decoration-line: underline;
+}
+
+
+@media (min-width:768px) {
+    .accountoverzicht {
+        visibility: hidden;
+    }
+
+    #wishlist h1 {
+        font-size: 2em;
+
+    }
+
+}
+
+@media (max-width:768px) {
+
+    #item1 {
+        display: flex;
+        grid-row-start: 2;
+
+    }
+
+    #item2 {
+        display: flex;
+        padding-top: 5em;
+        grid-row-start: 3;
+
+    }
+
+
+    #wishlist h1 {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        padding-top: 8em;
+    }
+
+    #wishlist h2 {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    #wishlist h4 {
+        padding-left: 10em;
+        font-size: .8em;
+    }
+
+    #item1 img {
+        height: 10em;
+        width: 8em;
+    }
+
+    #item2 img {
+        height: 10em;
+        width: 8em;
+    }
+
+    .wishlist_nav {
+        visibility: hidden;
+    }
+
 
 }
