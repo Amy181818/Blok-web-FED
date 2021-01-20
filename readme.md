@@ -21,7 +21,49 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 11. https://www.youtube.com/watch?v=2_E5uoiLCLY
 12. https://css-tricks.com/pure-css-horizontal-scrolling/
 13. https://www.youtube.com/watch?v=DEpF1nNz1l0
+14. https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_text
+15. https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_button
+16. https://www.flaticon.com/
 
+## Eindgesprek (HERKANSING)
+
+-dit ging goed & dit was lastig-
+
+dit ging goed:
+Na de mondeling ben ik meteen weer aan de slag gegaan met mijn website. Ik had helaas niet voorwaarden die ik moest hebben in mijn website.
+Ik moest mij nog meer gaan focussen op het toegankelijk maken van de website. En daarbij had ik geprobeerd om mijn website responsive te maken, maar dit heeft helaas niet goed uitgepakt. Het was het allemaal net niet. Vandaar dat ik mij voor mijn herkansing heb gefocused op een verzorgde surface plane. Ik heb mijn eigen iphone X als uitgangspunt gebruikt en vanuit hier mijn website gemaakt.
+Ik moest nog wat hovers, alt comments en andere verschillende codes toevoegen zodat ik aan mijn voorwaardes voldoe.
+
+
+dit ging lastig:
+Ik had mij eerst het meest gefocused op het responsive maken van mijn website waardoor mijn codes wat moeilijker te volgen waren.
+Het was dan ook even moeilijk in het begin om mijn codes te begrijpen en te veranderen.
+
+*Screenshot(s):**
+
+-screenshot(s) van je eindresultaat-
+
+<img src="IMAGESNIEUW/HERfoto1.jpg" width="375px" alt="Homepage van de website vedder & vedder.">
+
+<img src="IMAGESNIEUW/HERfoto2.jpg" width="375px" alt="Homepage van de website vedder & vedder.">
+
+<img src="IMAGESNIEUW/HERfoto3.jpg" width="375px" alt="Homepage van de website vedder & vedder.">
+
+<img src="IMAGESNIEUW/HERfoto4.jpg" width="375px" alt="Homepage van de website vedder & vedder.">
+
+<img src="IMAGESNIEUW/HERfoto5.jpg" width="375px" alt="Homepage van de website vedder & vedder.">
+
+<img src="IMAGESNIEUW/HERfoto6.jpg" width="375px" alt="Homepage van de website vedder & vedder.">
+
+<img src="IMAGESNIEUW/HERfoto7.jpg" width="375px" alt="Homepage van de website vedder & vedder.">
+
+<img src="IMAGESNIEUW/HERfoto8.jpg" width="375px" alt="Homepage van de website vedder & vedder.">
+
+<img src="IMAGESNIEUW/HERfoto9.jpg" width="375px" alt="Wishlist van de website vedder & vedder.">
+
+<img src="IMAGESNIEUW/HERfoto10.jpg" width="375px" alt="Wishlist van de website vedder & vedder.">
+
+<img src="IMAGESNIEUW/HERfoto11.jpg" width="375px" alt="Wishlist van de website vedder & vedder.">
 
 
 ## Eindgesprek (week 7/8)
@@ -204,7 +246,7 @@ Wat heb ik geleerd?
 rood
 
 **Je focus:** -kies uit responsive óf surface plane-
-allebei
+surface plan - Iphone X
 
 **Je opdracht:** -link naar de website die je gaat namaken óf de naam van je eigen ontwerp-
 Ik wil een website gaan namaken. De website heet Vedder & Vedder:
